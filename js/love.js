@@ -6,7 +6,35 @@ var wrap = document.getElementById("second-item2-wrap");
 var rightButton = document.getElementById("wrap-rightButton");
 var leftButton = document.getElementById("wrap-leftButton");
 
+var wrap2=document.getElementById("second-area-item2-wrap");
 
+
+
+var Indexbtn=document.getElementsByClassName("not-active");
+var secondItem2=document.getElementById("second-area-item2-leftId");
+
+
+
+for(var i = 0; i < Indexbtn.length; i++) {
+	(function(n) {
+		Indexbtn[n].onmouseover = function() {
+
+			var activeIndexbtn = document.getElementsByClassName("active")[0];
+			activeIndexbtn.className = "not-active";
+			Indexbtn[n].className = "active not-active";
+	
+			movePhoto(n);
+		};
+	})(i);
+}
+
+function movePhoto(n)
+{
+	var topHeight=secondItem2.getBoundingClientRect().top;
+	var bottomHeight=secondItem2.getBoundingClientRect().bottom;
+	var Height=bottomHeight-topHeight;
+	wrap2.style.top=(-Height)*n+"px";
+}
 
 var flag = 1;
 
@@ -39,16 +67,21 @@ function moveP(flag) {
 	if(flag == 1) {
 		var nowLeft = p.style.left;
 		var left = p.getBoundingClientRect().left;
+		left=left/3;
 		p.style.left = left + "px";
 		p.style.color = "#FF0000";
+		p.style.transition="all 1s";
 
 		afterP.style.right = left + "px";
 		afterP.style.color = "#FF0000";
+		afterP.style.transition="all 1s";
 	} else {
 		p.style.left = 0 + "px";
 		p.style.color = "blueviolet";
+		p.style.transition="all 1s";
 		afterP.style.right = 0;
 		afterP.style.color = "blueviolet";
+		afterP.style.transition="all 1s";
 	}
 }
 
@@ -68,8 +101,12 @@ var now = 0;
 
 function Slide(n) {
 	var item1 = document.getElementById("second-area-itemId");
+	var item2= document.getElementById("item2-photo");
+	
 
-	var rightWide = item1.getBoundingClientRect().right;
+	var rightWide = item2.getBoundingClientRect().right;
+	var leftWide=item2.getBoundingClientRect().left;
+    rightWide=(rightWide-leftWide)/3;
 
 	now = now + rightWide * n;
 
