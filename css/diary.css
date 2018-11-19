@@ -100,7 +100,7 @@
 }
 	
 .vertical-split{
-	margin-top: 7%;
+	margin-top: 15%;
 	height:50%;
 	width:100%;
 }
@@ -131,7 +131,7 @@
 	margin:0 auto;
 }
 .calendar-title{
-	height:30px;
+	height:5px;
 	width:50px;
 	color:whitesmoke;
 	font-size: 2rem!important;
