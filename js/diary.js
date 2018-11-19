@@ -95,7 +95,7 @@ addYearButton.onclick=function(){
 	var y=1;
 /*    console.log(year-currentTime.getFullYear());
     console.log(n-1);*/
-	if(year+1>currentTime.getFullYear() || (year-currentTime.getFullYear()==-1 && n>currentTime.getMonth()))
+	if(year+1>currentTime.getFullYear() || (year-currentTime.getFullYear()==-1 && n>currentTime.getMonth()+1))
 	{
 		y=0;
 	}
@@ -179,7 +179,7 @@ function pathConditions(){
           /* console.log(activeDay);*/
          var str;
          console.log(getMonthByEnglish(calendarMonth.innerHTML)+1);
-           if((activeDay==16 || activeDay==18 || activeDay==15 || activeDay==19 || activeDay==7 || activeDay==12 || activeDay==9) && getMonthByEnglish(calendarMonth.innerHTML)+1===11)
+           if((activeDay==16 || activeDay==18 || activeDay==15 || activeDay==19 || activeDay==7 || activeDay==12 || activeDay==9) && getMonthByEnglish(calendarMonth.innerHTML)+1===11 && calendarYear.innerHTML==currentTime.getFullYear())
            {
            	 str=getPagesPath(getMonthByEnglish(calendarMonth.innerHTML)+1,activeDay); 
            } 
