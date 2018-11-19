@@ -74,6 +74,7 @@ addMonthButton.onclick=function(){
     }
 /*    console.log(n);*/
 	monthButton(n,1,y);
+	 pathConditions();
 }
 
 reduceMonthButton.onclick=function(){
@@ -85,6 +86,7 @@ reduceMonthButton.onclick=function(){
 		y=-1;
 	}	
 	monthButton(n,-1,y);
+   pathConditions();
 }
 
 addYearButton.onclick=function(){
@@ -98,6 +100,7 @@ addYearButton.onclick=function(){
 		y=0;
 	}
 	monthButton(n,0,y);	
+	 pathConditions();
 }
 
 reduceYearButton.onclick=function(){
@@ -105,6 +108,7 @@ reduceYearButton.onclick=function(){
 	var year=calendarYear.innerHTML;
 	var y=-1;
 	monthButton(n,0,y);
+	 pathConditions();
 }
 
 function showTableDays(n,year,month,day){
@@ -162,11 +166,20 @@ for(var i=0;i<tableTdArray.length;i++)
 			
 			setActiveDay(tableTdArray[n]);
 			showMonthAndDate();
-            /*console.log(n);*/
+			pathConditions();
+          
+		
+	})
+	})(i);	
+}
+
+function pathConditions(){
+	  /*console.log(n);*/
            var activeDay=document.getElementsByClassName("activeDay")[0].innerHTML;
           /* console.log(activeDay);*/
          var str;
-           if(activeDay==16 || activeDay==18 || activeDay==15 || activeDay==19 || activeDay==7 || activeDay==12 || activeDay==9)
+         console.log(getMonthByEnglish(calendarMonth.innerHTML)+1);
+           if((activeDay==16 || activeDay==18 || activeDay==15 || activeDay==19 || activeDay==7 || activeDay==12 || activeDay==9) && getMonthByEnglish(calendarMonth.innerHTML)+1===11)
            {
            	 str=getPagesPath(getMonthByEnglish(calendarMonth.innerHTML)+1,activeDay); 
            } 
@@ -178,9 +191,6 @@ for(var i=0;i<tableTdArray.length;i++)
            }  
          /*  console.log(str);*/
             loadPages(str);
-		
-	})
-	})(i);	
 }
 
 showMonthAndDate();
