@@ -195,7 +195,7 @@ function pathConditions(){
 
 showMonthAndDate();
 
-loadPages(getPagesPath(getMonthByEnglish(calendarMonth.innerHTML)+1,document.getElementsByClassName("activeDay")[0].innerHTML));
+pathConditions();
 
 function setActiveDay(preparedDay){
 	var activeDay=document.getElementsByClassName("activeDay")[0];
