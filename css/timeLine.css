@@ -16,7 +16,7 @@
 	transition:all 5s;
 }
 .wrap:hover #wrap-middle{
-	height: 1500px;
+	height: 1800px;
 	background: #FC9D9A;
 	transition:height 5s;
 	border-bottom-left-radius: 1em;

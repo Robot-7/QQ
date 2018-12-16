@@ -82,11 +82,15 @@ $(function(){
     $("li").css("background", formerLiBackground01);
 	$("span").css("color", formerSpanColor01);
 	
+	
+	
 
 	var firstLi = document.getElementsByClassName("first-child");
 	var firstSpan = document.getElementsByClassName("first-span");
-
+	
 	setIndex(firstLi);
+    setColor(firstLi[0], activeLiBackground01, firstSpan[0], activeSpanColor01);
+	
 	for(var i = 0; i < firstLi.length; i++) {
 
 		firstLi[i].onmouseenter = function() {
