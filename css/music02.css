@@ -1,0 +1,339 @@
+.*{
+	margin:0;
+	padding:0;
+}
+
+.all-music-player{
+	margin: auto;
+	margin-top: 1%;
+	width:130rem;
+	height:55rem;
+}
+
+.left-music-player{
+	height:100%;
+	width:100%;
+
+}
+.top-music-player{
+	height: 80%!important;
+    width: 100%;
+}
+
+.top-music-player ul{
+	height:500px;
+    width: 100%;
+}
+.top-music-player ul li{
+	line-height: 50px;
+}
+.top-music-player ul:first-child{
+	line-height: 100%;
+
+	font-size: 2rem;
+	font-family: "宋体";
+	font-weight: 600;
+}
+
+.left-music-player li{
+
+   list-style: none;
+   height: 10%;
+   border-bottom: 1px dashed #A9A9A9;
+}
+
+.list-li div{
+	font-size: 1.5rem;
+	height: 100%;
+	position:relative;
+}
+
+.list-play-button{
+	position: absolute;
+	display: none;
+	
+	top:-100%;
+	width:35%;
+	left: 65%;
+}
+
+.active-list-play-button{
+	display: block!important;
+}
+
+.list-play-button button{
+	height: 100%;
+	width:5rem;
+	background: none;
+	border: none;
+	outline: none;
+	overflow: none;
+}
+.list-play-button button span{
+	line-height: 49px;
+}
+
+.list-right-area{
+	
+	width:70%;
+	
+}
+
+.list-middle-area{
+	width:20%;
+}
+
+.list-right-area{
+	width:10%;
+}
+
+.final-area{
+	height: 20%;
+	width:100%!important;
+	background: url(../img/final-area.png) no-repeat;
+}
+.final-area-button{
+	height:100%;
+}
+.final-area-button button{
+	padding-left: 2%;
+	margin-top: 30%;
+}
+.final-area-progress{
+	height:100%;	
+}
+.music-bar{
+	margin-top: 8%;
+	position:relative;
+	margin-left: 5%;
+	width:95%;
+	height: 5px!important;
+	background: white;
+	cursor: pointer;
+}
+
+.music-line{
+	position:absolute;
+	top:0px;
+	width: 0%;
+	height: 100%;
+	background: pink;
+}
+
+.music-point{
+	position:absolute;
+	top:-2.5px;
+	left:-5px;
+	width:10px;
+	height:10px;
+	border-radius: 10px;
+	background: #008B8B;
+}
+
+.music-showTitle{
+	position:absolute;
+	bottom:10px;
+}
+.music-showTime{
+	position:absolute;
+	height: 20px;
+    width:70px;
+	bottom:10px;
+	right:0px;
+}
+.right-music-player{
+	position:relative;	
+	width:22rem;
+	height:100%;
+}
+
+.right-music-context{
+	position:absolute;
+	left:-14px;
+	top:-200%;
+	height:100%!important;
+	width:480px!important;	
+}
+
+.right-music-mask_bg{
+	width:18rem;
+	height:660px;
+	position:absolute;
+	top:0;
+	left:-14px;
+	background:url(../img-player/light.png) no-repeat;
+	background-size: cover;	
+	filter: blur(50px);
+	z-index: -2;
+}
+
+.right-music-mask{
+	width:18rem;
+	height:660px;
+	position:absolute;
+	top:-100%;
+	left:-14px;
+	opacity: 0.1;
+	background: gray;
+	z-index: -1;
+}
+
+.lyrics-area{
+	position:relative;
+	margin-top:50px;
+	width:100%;
+	height:200px;
+	font-size:1.5rem;
+	font-family: "宋体";
+	font-weight: 700;
+	color: white;
+	text-align:center;
+	overflow: hidden;
+}
+
+.show-lyrics{
+	position:absolute;
+	top:40px;
+	left:0;
+	height:8000%;
+	width: 100%;
+	transition-duration: 0.8s;
+}
+
+.lyrics-area li{
+	font-size: 1.6rem;
+	line-height: 40px;
+	list-style: none;
+	background: none!important;
+}
+
+.on{
+	color:#84AF9B;
+}
+
+.button-area{
+	position:absolute;
+	margin-top:200px;
+	width:90%;
+	height:50px;
+	bottom:0;
+}
+.right-music-player h2{
+	color:#EB4310;
+	font-family: "宋体";
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.button{
+	cursor: pointer;
+	font-family: "宋体";
+	text-align: center;
+	font-size: 1.5rem;
+	background: none;
+	border:none;
+	outline: none;
+	color: #F15B6C;
+	
+}
+
+#music-title{
+	text-align: center;
+}
+
+#sound-bar{
+	cursor: pointer;
+	overflow: hidden;
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	position:absolute;
+	height:100px;
+	width:10px;
+	background: aliceblue;
+	position:relative;
+	top:-90px;
+	left:93%;
+}
+
+.glyphicon-volume-down{
+	position:absolute;
+	bottom: 0px;
+}
+
+[class*="glyphicon-"]{
+	font-size: 25px;
+}
+
+#sound-point{
+	list-style: none;
+	width:10px;
+	height:0px;
+    background:#F391A9;
+    position:absolute;
+    height:20px;
+    bottom: 0px;
+    transition-duration:1.5s;
+}
+
+#music-photo{
+	overflow:hidden;
+    transform: rotate(0deg); 
+	margin-left:27%;
+	width: 200px;
+	height:200px;
+	border-radius: 200px;
+	background: #F0F8FF;
+	position:relative;
+	transition-duration: 2s;
+}
+
+
+
+#wrap-photo{
+	display: flex;
+	transform: rotate(0deg);
+	width:900%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	transition-duration: 2s;
+}
+
+#last-button{
+	margin-left: 20%;
+}
+
+.photo{
+	height:100%;
+	width:25%;
+	
+}
+
+.photo img{
+	width:100%;
+	height:100%;
+}
+
+.show{
+	font-weight: 800;
+	text-align: center;
+	font-size: 1rem;
+	font-family: "宋体";
+	color: #F26522;
+
+}
+
+.mask_bg{
+	position:absolute!important;
+	left:0!important;
+	right:0!important;
+	z-index:-2;
+	width:100%;
+	height: 100%;
+	background: url(../img/238a9c93a1fff648f9bf30f171d1f433.png) no-repeat 0 0;
+	background-size: cover;
+	filter:blur(100px);
+}
